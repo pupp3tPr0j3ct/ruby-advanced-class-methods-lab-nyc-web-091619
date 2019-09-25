@@ -1,7 +1,9 @@
 require 'pry'
 
 class Song
+
   attr_accessor :name, :artist_name
+  
   @@all = []
 
   def initialize(name, artist_name)
@@ -18,8 +20,10 @@ class Song
   end
 
   def self.create
-    name
+    song = Song.new
+    song.name = name
+    song.artist_name = artist_name
   end
 end # End of Class
 
-binding.pry
+#binding.pry
